@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>PLACEHOLDER</title>
+  <title>Currency Converter</title>
 </head>
 <body>
-  <div>Hello world!</div>
-  <img id='testImg' src="assets/images/testimg.jpeg" alt="shelf with plant">
+  <div class="container">
+    <div id="intro">
+      <h1>Currency Conversion Calculator</h1>
+      <img id='testImg' src="assets/images/moneyPhoto.png" alt="hand holding money from different countries">
+    </div>
+    <div id="userForm">
+      <form id="selectForm">
+
+        <div class="form-group">
+          <label for="conAmount">USD Amount:</label>
+          <input id="conAmount" class="form-control" type="text">
+        </div>
+        <button type="submit" class="btn-dark">Convert to Euro</button>
+
+      </form>
+    </div>
+    <div id="conversionResult">
+
+    </div>
+    <div id="ErrorMessage">
+
+    </div>
+  </div>
 </body>
 </html>
 
