@@ -10,39 +10,31 @@ function clearPrevious() {
   $("#errorMessage").text("");
 }
 
-// function findMultValue(curCode) {
-//   return returnedInfo.conversion_rates.curCode
-// }
-
-function showResults(returnedInfo, number, currencyCode) {
+function showResults(returnedInfo, number, curName) {
   if (returnedInfo.conversion_rates) {
-    // console.log(`currencyCode is ${currencyCode}`);
-
-    // const setCode = returnedInfo.conversion_rates;
-
-    // const testThing = setCode.currencyCode;
-
-    // const convNumber = parseFloat(setCode).toFixed(2);
-    // console.log(`convNumber is ${convNumber}`);
-
-    $("#conversionResult").text(`${number} dollars is equal to ${parseFloat(returnedInfo.conversion_rates[0].currencyCode) * number).toFixed(2)} in ${currencyCode}.`);
+    console.log(`second time currencyName is ${curName}`);
+    console.log(`rate object at curName ${returnedInfo.conversion_rates}`);
+    $("#conversionResult").text(`${number} dollars is equal to ${parseFloat(returnedInfo.conversion_rates[curName] * number).toFixed(2)} in ${curName}.`);
   } else {
     $("#errorMessage").text(returnedInfo);
   }
 }
 
-async function showMeTheData(number, currencyCode) {
+async function showMeTheData(number, curName) {
   const response = await CurrencyService.getConversions();
-  showResults(response, number, currencyCode);
+  showResults(response, number, curName);
 }
 
 $(document).ready(function() {
   $('#userButton').click(function() {
     event.preventDefault();
     const userNumber = $('#conAmount').val();
-    const toCurType = $('#toCurrency').val();
+
+    const currencyName = $('#toCurrency').val();
+    console.log(`currencyName is ${currencyName}`);
+
     clearPrevious();
-    showMeTheData(userNumber,toCurType);
+    showMeTheData(userNumber, currencyName);
   });
 });
 
