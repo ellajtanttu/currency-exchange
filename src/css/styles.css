@@ -1,4 +1,8 @@
 #testImg {
-  max-width: 200px;
+  max-width: 400px;
   width: auto;
+}
+.sectionDiv {
+  margin-top: 35px;
+  margin-bottom: 35px
 }
