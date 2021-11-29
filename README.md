@@ -8,30 +8,29 @@
 
 - CSS3
 - HTML5
+- Bootstrap
 - JAVAscript
 - eslint
 - Jest
+- JQuery
 - Node & NPM
 - popper.js
 - webpack
 
 ## Description
 
-_UPDATE UPON COMPLETION_
-
-## View Live Application on GH-Pages
-_UPDATE UPON COMPLETION_
+A web application which pulls data from exchangerate-api.com to convert current currency rates. User enters a number of US dollars, and selects a currency option from a select box. On submit, the application will make an api call and return the current conversion value for the specified amount of USD. 
 
 ## Setup & Installation Instructions
 
-_UPDATE UPON COMPLETION_
-1. Download or clone github repository to local machine in desired directory - https://github.com/url-path
+1. Download or clone github repository to local machine in desired directory - https://github.com/ellajtanttu/currency-exchange
 2. If downloaded, extract .zip contents to desired directory
 3. Navigate to and open directory with Visual Studio Code
 4. Open terminal and install required packages by typing "npm install"
-5. Test code in terminal by typing "npm test"
-6. Build the display environment in the terminal by typing "npm run build"
-7. Run the environment in your default web browser by typing "npm run start" in the terminal
+5. create an .env file in the root directory with terminal command '$ touch .env'
+6. got to ExchangeRate-API website and create an account and follow the instructions to create your own API key. Add this key to your .env file in the following format: 'API_KEY=yourKeyHere' (replace yourKeyHere with your personal key).
+7. Save your .env file.
+10. Run the environment in your default web browser by typing "npm run start" in the terminal
 
 ## Known Bugs
 
@@ -67,19 +66,18 @@ _Ella Tanttu ellajtanttu@gmail.com_
 5. **UI** - json is parsed and requested values are added to the dom
 
 ### **files I'll need**
-- index.js\
+- [X] index.js\
       - import statements - sync\
       - clear fields - sync (called in async)\
-      - math conversion logic - sync\
       - add elements to dom function - sync (called in async)\
       - triggerAPIcall function - _**async**_\
       - documentready/click function - sync
-- index.html\
+- [X] index.html\
       - intro
       - form for user
       - conversion response
       - error
-- apicall service.js\
+- [X] apicall service.js\
       - async, static, default class, fetch (with a catch throw)
 
 start with one language, add four others OR create a loop to add all languages as an option in dropdown (depending on time left)
